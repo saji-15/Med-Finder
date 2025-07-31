@@ -1,0 +1,15 @@
+<div class="search-container">
+  <input
+    #medicineInput
+    type="text"
+    placeholder="Enter medicine name..."
+    class="medicine-input"
+    (keyup.enter)="performSearch(medicineInput)"
+  />
+
+  <select [(ngModel)]="selectedLocation" class="location-select">
+    <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+  </select>
+
+  <button (click)="performSearch(medicineInput)">Search</button>
+</div>

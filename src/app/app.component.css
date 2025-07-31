@@ -1,0 +1,102 @@
+/* src/app/app.component.css */
+:host {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  width: 60%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid #007bff;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.results-container {
+  text-align: left;
+}
+
+.pharmacy-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.pharmacy-card.out-of-stock {
+  opacity: 0.6;
+  background-color: #fde0e0;
+  border-left: 5px solid #dc3545;
+}
+
+.pharmacy-card:not(.out-of-stock) {
+    border-left: 5px solid #28a745;
+}
+
+.pharmacy-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.pharmacy-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0056b3;
+}
+
+.stock-status.available {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.stock-status.unavailable {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.not-found {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  color: #856404;
+}

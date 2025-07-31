@@ -1,0 +1,24 @@
+<div class="results-container" *ngIf="searchResults && searchCriteria">
+  <div *ngIf="searchResults.length > 0; else noResults">
+    <h2>
+      Available at the following pharmacies for 
+      <strong>"{{ searchCriteria.medicine }}"</strong> in <strong>{{ searchCriteria.location }}</strong>:
+    </h2>
+    <div *ngFor="let result of searchResults" class="pharmacy-card" [class.out-of-stock]="!result.medicineDetails.inStock">
+      <h3>{{ result.pharmacyName }}</h3>
+      <p class="address">{{ result.pharmacyAddress }}</p>
+      <p class="price">Price: ₹{{ result.medicineDetails.price.toFixed(2) }}</p>
+      <p *ngIf="result.medicineDetails.inStock" class="stock-status available">✅ In Stock</p>
+      <p *ngIf="!result.medicineDetails.inStock" class="stock-status unavailable">❌ Out of Stock</p>
+    </div>
+  </div>
+
+  <ng-template #noResults>
+    <div class="not-found">
+       <h2>
+          Sorry, we could not find <strong>"{{ searchCriteria.medicine }}"</strong> in <strong>{{ searchCriteria.location }}</strong>.
+       </h2>
+       <p>Please check the spelling or try another location.</p>
+    </div>
+  </ng-template>
+</div>
