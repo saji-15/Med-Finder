@@ -1,27 +1,75 @@
-# MedFinder
+# 💊Med-Finder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+A vibrant and modern web application built with Angular to help users find the availability and pricing of medicines in pharmacies across various districts of Odisha. This project serves as a demonstration of front-end development skills, featuring a dynamic user interface and a responsive, component-based architecture.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Key Features
 
-## Code scaffolding
+* **Medicine Search:** Search for medicines by name.
+* **Location-Based Filtering:** A dropdown menu populated with numerous districts of Odisha to narrow down the search.
+* **Real-time Style Results:** View search results instantly, showing pharmacy details, price in Rupees (₹), and a clear   "In Stock" or "Out of Stock" status.
+* **Responsive Design:** The layout is functional and aesthetically pleasing on different screen sizes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 💻 Technology Stack
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+* **Framework:** [Angular](https://angular.io/)
+* **Language:** [TypeScript](https://www.typescriptlang.org/)
+* **Styling:** CSS3 (featuring Flexbox, Grid, Custom Animations, and `backdrop-filter` for the glass effect)
+* **Markup:** HTML5
+* **Version Control:** Git & GitHub
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🛠️ Setup and Installation
 
-## Running end-to-end tests
+To get a local copy up and running, follow these simple steps.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Prerequisites
 
-## Further help
+* Node.js and npm: [https://nodejs.org/](https://nodejs.org/)
+* Angular CLI: `npm install -g @angular/cli`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/saji-15/Med-Finder.git
+    ```
+2.  **Navigate to the project directory:**
+    ```sh
+    cd arogya-odisha-finder
+    ```
+3.  **Install NPM packages:**
+    ```sh
+    npm install
+    ```
+4.  **Run the development server:**
+    ```sh
+    ng serve --open
+    ```
+    The application will automatically open on `http://localhost:4200/`.
+
+---
+
+## 🧭 How to Use
+
+The application has two main pages accessible from the navigation bar:
+
+1.  **Medicine Finder:**
+    * Enter the name of a medicine (e.g., "Paracetamol") in the search text box.
+    * Select a district from the dropdown menu (e.g., "Brajrajnagar").
+    * Click the "Search" button.
+    * The results will appear below, showing which pharmacies in that district have the medicine.
+
+
+## 🔮 Future Improvements
+
+This is a demonstration project, but it could be expanded with features like:
+
+* [ ] Integration with a real backend API and database for live inventory data.
+* [ ] User authentication for saving favorite searches or pharmacies.
+* [ ] An interactive map view to show pharmacy locations.
+* [ ] Advanced filtering options (e.g., filter by price, 24/7 pharmacies).
